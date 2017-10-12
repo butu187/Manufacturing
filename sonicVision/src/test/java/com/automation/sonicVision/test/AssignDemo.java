@@ -17,7 +17,8 @@ public class AssignDemo {
 	@Test
 	public  void testAssignDemo()throws InterruptedException{
 		
-		WebDriver driver =LaunchBrowser.launchInternetExplorer();
+		WebDriver driver =LaunchBrowser.launchChrome();
+		driver.manage().deleteAllCookies();
 		driver.get("https://whatfix.com/quickolabs.com/#!flows/how-to-import-google-analytics-solution-of-whatfix/8174f470-9df9-11e3-8178-386077c653fe/");
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//a[.='Self Help']")).click();
