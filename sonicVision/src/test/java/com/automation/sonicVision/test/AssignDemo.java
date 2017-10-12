@@ -27,23 +27,23 @@ public class AssignDemo {
 		driver.switchTo().parentFrame();
 		WebDriverWait wait=new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[.='embed']/..")));
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		driver.findElement(By.xpath("//a[.='embed']/..")).click();
 		
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		driver.findElement(By.xpath("//a[.='slideshow']")).click();
 		
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		List<WebElement> e = driver.findElements(By.xpath("//a[@id='wfx-tooltip-next']"));
 		e.get(e.size()-1).click();
 		
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[.='close']")));
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		driver.findElement(By.xpath("//a[.='close']")).click();
 	
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='WFEMHS WFEMNS']")));
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		driver.findElement(By.xpath("//button[.='CLOSE']")).click();
 		driver.close();
 	}
