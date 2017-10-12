@@ -43,7 +43,7 @@ public class AssignDemo {
 	
 		Thread.sleep(3000);
 		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='WFEMHS WFEMNS']")));
-	
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//button[.='CLOSE']")).click();
 		driver.close();
 	}
