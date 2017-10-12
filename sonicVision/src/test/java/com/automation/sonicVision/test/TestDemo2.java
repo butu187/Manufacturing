@@ -5,10 +5,10 @@ import org.testng.annotations.Test;
 
 import com.automation.sonicVision.browser.LaunchBrowser;
 
-public class TestDemo1 {
+public class TestDemo2 {
 	@Test
 	public void testDemo(){
-		WebDriver driver = LaunchBrowser.launchInternetExplorer();
+		WebDriver driver = LaunchBrowser.launchFirefox();
 		driver.close();
 	}
 }
