@@ -16,7 +16,7 @@ public class BaseTest {
 	public ExtentTest test;
 	@BeforeMethod
 	public void setUp(Method m){
-		r=new ExtentReports("./reports/report.html",false);
+		r=new ExtentReports("./reports/report.html",true);
 		test=r.startTest(m.getName());
 
 	}
