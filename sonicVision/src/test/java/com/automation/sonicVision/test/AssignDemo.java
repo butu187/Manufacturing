@@ -11,21 +11,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.automation.sonicVision.browser.LaunchBrowser;
 
 public class AssignDemo extends BaseTest {
-	public WebDriver driver;
+	
+	
+	
+	
 	@Test
 	public  void testAssignDemo()throws InterruptedException{
 		
 		driver =LaunchBrowser.launchChrome();
-//		driver.manage().deleteAllCookies();
-//		driver.get("https://whatfix.com/quickolabs.com/#!flows/how-to-import-google-analytics-solution-of-whatfix/8174f470-9df9-11e3-8178-386077c653fe/");
-//		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-//		driver.findElement(By.xpath("//a[.='Self Help']")).click();
-//		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@title='Get Started with Whatfix']")));
+		driver.manage().deleteAllCookies();
+		driver.get("https://whatfix.com/quickolabs.com/#!flows/how-to-import-google-analytics-solution-of-whatfix/8174f470-9df9-11e3-8178-386077c653fe/");
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//a[.='Self Help']")).click();
+		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@title='Get Started with Whatfix']")));
 //		driver.findElement(By.xpath("//a[.='How to embed flows in my website or application?']")).click();
 //		driver.switchTo().parentFrame();
 //		WebDriverWait wait=new WebDriverWait(driver, 20);
@@ -48,8 +52,8 @@ public class AssignDemo extends BaseTest {
 //		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='WFEMHS WFEMNS']")));
 //		Thread.sleep(6000);
 //		driver.findElement(By.xpath("//button[.='CLOSE']")).click();
+		Assert.fail();
 		driver.close();
-	
 	}
 	
 }
