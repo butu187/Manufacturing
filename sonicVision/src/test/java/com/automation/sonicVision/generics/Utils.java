@@ -23,7 +23,7 @@ public class Utils {
 		String path="";
 		try {
 			//FileUtils.copyFile(((TakesScreenshot)(driver)).getScreenshotAs(OutputType.FILE), new File("./ScreenShot/"+name+Utils.getDateAndTime()+".png"));
-			path="./ScreenShot/"+name+"-"+Utils.getDateAndTime()+".png";
+			path=System.getProperty("user.dir")+"/ScreenShot/"+name+"-"+Utils.getDateAndTime()+".png";
 			FileUtils.copyFile(new EventFiringWebDriver(driver).getScreenshotAs(OutputType.FILE), new File(path));
 			
 		} catch (WebDriverException e) {
